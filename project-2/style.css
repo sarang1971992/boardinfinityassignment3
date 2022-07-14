@@ -1,0 +1,209 @@
+ html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+  
+  body {
+    background:black;
+    margin: 10px 10px;
+    line-height: 1.4;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h4 {margin-top:50px;
+    display:flex;
+    background:linear-gradient(to right,pink,red,blue);;
+  }
+
+  h4:before, h4:after {
+    color:white;
+    content:'';
+    flex:1;
+    border-bottom:groove 2px;
+    margin:auto 0.25em;
+ }
+  
+  .wrapper {
+    display: grid;
+    grid-gap: 20px;
+    border: 1px solid grey;
+    background-image:linear-gradient(to right, red ,pink, blue);
+  }
+  
+  /* Navigation */
+  .main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+ 
+  
+  .main-nav a {
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    background-color: #CDDC39;
+    color: black;
+ }
+  
+ 
+  
+  /* Top Container */
+  .top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      'showcase showcase top-box-a'
+      'showcase showcase top-box-b';
+  }
+  
+  /* Showcase */
+  .showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url("images/tacos.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+ 
+  }
+  .showcase .p ,h1{
+   background-color:  #CDDC39;
+  }
+
+  .btn{
+    background-color:  #CDDC39; 
+  }
+  .pl{
+    text-align: center;
+  }
+  
+ 
+  /* Top Box */
+  .top-box {
+    background: #CDDC39;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 4px;
+    
+  }
+  
+  .top-box .price {
+    font-size: 2.5rem;
+  }
+  
+  .top-box-a {
+    grid-area: top-box-a;
+    margin: 0; 
+}
+  
+  .top-box-b {
+    grid-area: top-box-b;
+    margin: 0;
+  }
+  
+  /* Boxes */
+  .boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .box {
+    background: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Info */
+  .info {
+    background: white;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+  }
+  
+  /* Portfolio */
+  .portfolio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .portfolio img {
+    width: 100%;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 2rem;
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 700px) {
+    .top-container {
+      grid-template-areas:
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
+  
+    .showcase h1 {
+      font-size: 2.5rem;
+    }
+  
+    .main-nav ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .info {
+      grid-template-columns: 1fr;
+    }
+  
+    .info .btn {
+      display: block;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .top-container {
+      grid-template-areas:
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+    }
+  }
+  
+ 
+ 
+
+
+ 
